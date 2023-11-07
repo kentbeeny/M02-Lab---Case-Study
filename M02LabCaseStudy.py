@@ -13,15 +13,17 @@ GPA = 6.0
 while True:
     fName = input("Enter the student's First Name: ")
     lName = input("Enter the student's Last Name: ")
-    while True:
-        try:
-            GPA = float(input("Enter the student's GPA: "))
-            break
-        except ValueError:
-            print("That was not a valid GPA. Try again...")
     if lName == "ZZZ":
         break
-    elif GPA >= 3.5:
+    else:
+        #####################
+        while True:
+            try:
+                GPA = float(input("Enter the student's GPA: "))
+                break
+            except ValueError:
+                        print("That was not a valid GPA. Try again...")
+    if GPA >= 3.5:
         print(fName + " " + lName + " has made the Dean's List!")
     elif GPA >= 3.25:
         print(fName + " " + lName + " has made the Honor Roll!")
